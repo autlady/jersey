@@ -1,0 +1,178 @@
+@font-face {
+	font-family: 'Tuerca Black';
+	src: url('../fonts/tuerca_black.woff2') format('woff2');
+}
+
+@font-face {
+	font-family: 'Tuerca Bold';
+	src: url('../fonts/tuerca_bold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Golos Text';
+  src: local('Golos Text Regular'), local('Golos-Text-Regular'),
+      url('../fonts/GolosText-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Golos Text';
+  src: local('Golos Text Medium'), local('Golos-Text-Medium'),
+      url('../fonts/GolosText-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inter';
+  src: local('Inter Regular'), local('Inter-Regular'),
+      url('../fonts/Inter-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.none {
+  display: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--dark-blue);
+}
+
+html,
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  padding: 0;
+  width: 100%;
+
+  -webkit-font-smoothing: antialiased;
+}
+
+.noscroll {
+  overflow: hidden;
+  touch-action: none;
+  -ms-touch-action: none;
+  height: 100vh;
+}
+
+a {
+  color: inherit;
+  display: inline-block;
+  transition: color 0.2s ease-in;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+figure {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+input,
+button,
+button:focus,
+input:focus {
+  outline: none;
+}
+
+button {
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+}
+
+input[type="submit"] {
+  padding: 0;
+  cursor: pointer;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border-bottom: 1px solid red;
+  -webkit-text-fill-color: #ffffff;
+  -webkit-box-shadow: 0 0 0px 1000px #01203c inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 40px;
+
+  @media (max-width: 1023px) {
+    padding: 0 16px;
+  }
+
+}
+
+.headline {
+  margin-bottom: 40px;
+  font-weight: 400;
+  font-size: clamp(28px, 18.5px + 2.37vw, 64px);
+  text-transform: uppercase;
+  color: var(--white);
+
+  span {
+    color: var(--yellow);
+  }
+}
+
+.subtitle {
+  font-size: clamp(20px, 14.7px + 1.33vw, 36px);
+  text-transform: uppercase;
+  color: var(--yellow);
+}
+
+.subtitle--blue {
+  color: var(--blue);
+}
+
+
+
+
