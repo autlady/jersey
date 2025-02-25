@@ -1,0 +1,30 @@
+mixin card(time, name, img, num)
+    //CARD
+    .product-card&attributes(attributes)
+        .product-card-inner
+            .product-card-overlay
+                .product-card-overlay__text Джерси продано
+                .product-card-overlay__img
+                    img(src="./img/print.svg" alt="print" width="80" height="78")
+            //CARD-FRONT
+            .product-card-front
+                .product-card-front__img
+                    img(src="./img/products/" + img + ".webp" alt="jersey" srcset="./img/products/" + img + "@2x.webp 2x" width="365" height="402")
+                    .product-card-front__time !{time}
+                .product-card-front__row
+                    .product-card-front__name !{name}
+                    .product-card-front__num !{num}
+                button.product-card-front__btn купить за 25 000 ₽
+                    svg.svg-right
+                        use(href="./img/spriteSvg.svg#svg-right")
+            //CARD-BACK
+            .product-card-back
+                .product-card-front__row
+                    .product-card-front__name !{name}
+                    .product-card-front__num !{num}
+                .product-card-back__center
+                    .product-card-back__text Наведите на QR-код, чтобы увидеть сертификат подлинности
+                    .product-card-back__qr
+                        img(src="./img/qr.svg" alt="qr" width="200" height="200")
+                .product-card-back__logo
+                    img(src="./img/card-logo.svg" alt="logo" width="119" height="153")
