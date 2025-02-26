@@ -1,32 +1,61 @@
-// const toggleMenu = document.querySelector('menu-toggle');
+document.addEventListener("DOMContentLoaded", function () {
 
-// if (toggleMenu){
-//     toggleMenu.addEventListener('click', function(){
-        
-//         if(this.classList.contains('active')){
-//             this.classList.remove('active');
-//         }else{
-//             this.classList.add('active');
-//         }
-//     })
-// }
+  //анимация карточек
+  function flipCard() {
+    const cards = document.querySelectorAll('.product-card');
+    for (let card of cards) {
+      card.addEventListener('click', flipHandler);
+    }
+  }
+
+  function removeFlipCard() {
+    const cards = document.querySelectorAll('.product-card');
+    for (let card of cards) {
+      card.removeEventListener('click', flipHandler);
+      card.classList.remove('flip');
+    }
+  }
+
+  function flipHandler() {
+    this.classList.toggle('flip');
+  }
+
+  function handleResize() {
+    if (window.innerWidth < 768) {
+      if (!window.flipInitialized) {
+        flipCard();
+        window.flipInitialized = true;
+      }
+    } else {
+      if (window.flipInitialized) {
+        removeFlipCard();
+        window.flipInitialized = false;
+      }
+    }
+  }
+
+  handleResize();
+
+  window.addEventListener('resize', handleResize);
 
 
+  //СЧЕТЧИК
+  setTimeout(() => {
+    document.querySelectorAll(".counter__num img").forEach((img) => {
+        const maxNum = parseInt(img.dataset.num, 10);
+        let currentNum = 0; // Начинаем с 0
+        const updateInterval = 300; // время смены 1 цифры
 
-const swiper = new Swiper('#products-slider', {
+        function updateSrc() {
+            img.src = `./img/numbers/${currentNum}.svg`;
 
-  slidesPerView: 3,
-  spaceBetween: 32,
-  loop: true,
+            if (currentNum < maxNum) {
+                currentNum++;
+                setTimeout(updateSrc, updateInterval);
+            }
+        }
 
-  pagination: {
-    el: '#products-slider-pagination',
-  },
-
-  navigation: {
-    nextEl: '#btn-next',
-    prevEl: '#btn-prev',
-  },
-});
-
-
+        updateSrc();
+    });
+}, 1000);//через какое время начинается анимация после загрузки
+})

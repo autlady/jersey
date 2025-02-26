@@ -2,6 +2,10 @@
     padding-block: 98px;
     position: relative;
 
+    @media(max-width: 400px) {
+        padding-top: 60px;
+    }
+
     &::before {
         position: absolute;
         content: "";

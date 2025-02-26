@@ -32,6 +32,8 @@
     }
 
     .svg-right {
+        width: 13px;
+        height: 14px;
         margin-left: 12px;
     }
 
@@ -40,12 +42,25 @@
         height: remy(80);
         font-size: remy(20);
         line-height: remy(80);
+
+        .svg-right {
+            width: remy(13);
+            height: remy(14);
+            margin-left: remy(12);
+        }
     }
 
     @media (max-width: 767px) {
+        padding: 0 40px;
         font-size: 16px;
         line-height: 59px;
         height: 59px;
+
+        .svg-right {
+            width: 13px;
+            height: 14px;
+            margin-left: 12px;
+        }
     }
 
     @media (max-width: 490px) {
