@@ -1,5 +1,11 @@
 .quantity {
+    position: relative;
     margin-top: -130px;
+    z-index: 5;
+
+    @media (max-width: 767px) {
+        margin-top: 15px;
+    }
 }
 
 .quantity__wrapper {
@@ -10,6 +16,10 @@
     border: 3px solid var(--dark-blue);
     border-radius: 10px;
     background-color: var(--white);
+
+    @media(max-width: 1919px) {
+        padding-block: remy(60);
+    }
 
     @media (max-width: 1260px) {
         flex-direction: column;
@@ -23,9 +33,12 @@
 }
 .quantity__text {
     font-size: 56px;
-    // font-size: clamp(24px, 13px + 2.67vw, 56px);
     text-transform: uppercase;
     color: var(--blue);
+
+    @media(max-width: 1919px) {
+        font-size: remy(56);
+    }
 
     @media (max-width: 767px) {
         font-size: 24px;
@@ -37,6 +50,11 @@
     gap: 12px;
     margin-inline: 52px;
     background-color: var(--white);
+
+    @media(max-width: 1919px) {
+        margin-inline: remy(52);
+        gap: remy(12);
+    }
 
     @media (max-width: 767px) {
         gap: 4px;
@@ -58,6 +76,17 @@
     background-size: contain;
     background-position: bottom;
     background-repeat: no-repeat;
+
+    @media(max-width: 1919px) {
+        width: remy(86);
+        height: remy(140);
+        border-radius: remy(6);
+
+        img {
+            width: remy(48);
+            height: remy(46);
+        }
+    }
 
     @media (max-width: 767px) {
         border-radius: 4px;

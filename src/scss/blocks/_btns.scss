@@ -1,4 +1,6 @@
 .btn {
+    position: relative;
+    z-index: 10;
     display: inline-block;
 
     padding: 0 40px;
@@ -33,9 +35,20 @@
         margin-left: 12px;
     }
 
+    @media(max-width: 1919px) {
+        padding: 0 remy(40);
+        height: remy(80);
+        font-size: remy(20);
+        line-height: remy(80);
+    }
+
     @media (max-width: 767px) {
         font-size: 16px;
         line-height: 59px;
         height: 59px;
+    }
+
+    @media (max-width: 490px) {
+        width: 100%;
     }
 }
