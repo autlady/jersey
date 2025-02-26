@@ -1,6 +1,9 @@
+.quantity {
+    margin-top: -130px;
+}
+
 .quantity__wrapper {
     padding-block: 60px;
-    // height: 260px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -49,12 +52,12 @@
     width: 86px;
     height: 140px;
     border-radius: 6px;
-    // background: var(--text);
-    background-image: url("../img/border.svg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background: var(--text);
     box-shadow: inset 2px 4px 4px 0 rgba(255, 255, 255, 0.25), 1px 4px 4px 0 rgba(0, 0, 0, 0.15);
+    background-image: url("../img/border.svg");
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
 
     @media (max-width: 767px) {
         border-radius: 4px;

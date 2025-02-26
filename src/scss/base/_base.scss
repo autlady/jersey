@@ -32,6 +32,10 @@
   font-style: normal;
 }
 
+@function remy($pxsize) {
+  @return calc(($pxsize/19.2))*1vw;
+}
+
 * {
   box-sizing: border-box;
 }
