@@ -8,6 +8,20 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
+    const cards = document.querySelectorAll('.product-card');
+    for (let card of cards) {
+      const cardImage = card.querySelector('.product-card-front__img');
+      const cardBack = card.querySelector('.product-card-back');
+      cardImage.addEventListener('mouseenter', (e)=> {
+          card.classList.add('flip');
+      });
+      cardBack.addEventListener('mouseleave', (e)=> {
+          card.classList.remove('flip');
+      });
+
+    }
+
+
   function removeFlipCard() {
     const cards = document.querySelectorAll('.product-card');
     for (let card of cards) {
