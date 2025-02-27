@@ -36,6 +36,10 @@
   @return calc(($pxsize/19.2))*1vw;
 }
 
+@function remy2($pxsize) {
+  @return calc(($pxsize/3.75))*1vw;
+}
+
 * {
   box-sizing: border-box;
 }
