@@ -14,7 +14,7 @@ mixin card(time, name, img, num)
                 .product-card-front__row
                     .product-card-front__name !{name}
                     .product-card-front__num !{num}
-                button.product-card-front__btn купить за 25 000 ₽
+                a(href="https://www.hcsochi.ru/" target="_blank").product-card-front__btn купить за 25 000 ₽
                     svg.svg-right
                         use(href="./img/spriteSvg.svg#svg-right")
             //CARD-BACK
@@ -26,5 +26,8 @@ mixin card(time, name, img, num)
                     .product-card-back__text Наведите на QR-код, чтобы увидеть сертификат подлинности
                     .product-card-back__qr
                         img(src="./img/qr.svg" alt="qr" width="200" height="200")
+                a(href="#!").product-card-back__link Посмотреть <br> сертификат
+                    svg.svg-right
+                        use(href="./img/spriteSvg.svg#svg-right")
                 .product-card-back__logo
                     img(src="./img/card-logo.svg" alt="logo" width="119" height="153")
