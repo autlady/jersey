@@ -25,9 +25,9 @@ mixin card(time, name, img, num)
                         .product-card-front__num !{num}
                     .product-card-back__center
                         .product-card-back__text Наведите на QR-код, чтобы увидеть сертификат подлинности
-                        .product-card-back__qr
+                        .product-card-back__qr(data-modal-button="photo-modal")
                             img(src="./img/qr.svg" alt="qr" width="200" height="200")
-                    a(href="https://www.hcsochi.ru/" target="_blank").product-card-back__link Посмотреть <br> сертификат
+                    button(class="product-card-back__link" data-modal-button="photo-modal") Посмотреть <br> сертификат
                         svg.svg-right
                             use(href="./img/spriteSvg.svg#svg-right")
                     .product-card-back__logo
