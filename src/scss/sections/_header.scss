@@ -7,6 +7,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    overflow: hidden;
 
     @media(max-width: 1919px) {
         padding-bottom: remy(420);

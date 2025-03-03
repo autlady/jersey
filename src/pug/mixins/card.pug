@@ -1,4 +1,4 @@
-mixin card(time, name, img, num)
+mixin card(time, name, img, num, srcImg)
     //CARD
     .product-card-wrapper
         .product-card&attributes(attributes)
@@ -25,9 +25,9 @@ mixin card(time, name, img, num)
                         .product-card-front__num !{num}
                     .product-card-back__center
                         .product-card-back__text Наведите на QR-код, чтобы увидеть сертификат подлинности
-                        .product-card-back__qr(data-modal-button="photo-modal")
+                        .product-card-back__qr(data-modal-button="photo-modal" data-img="" + srcImg)
                             img(src="./img/qr.svg" alt="qr" width="200" height="200")
-                    button(class="product-card-back__link" data-modal-button="photo-modal") Посмотреть <br> сертификат
+                    button(class="product-card-back__link" data-modal-button="photo-modal" data-img="" + srcImg) Посмотреть <br> сертификат
                         svg.svg-right
                             use(href="./img/spriteSvg.svg#svg-right")
                     .product-card-back__logo

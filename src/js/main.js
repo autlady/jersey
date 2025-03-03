@@ -89,10 +89,13 @@ if (modalFrames.length > 0) {
       }
       e.preventDefault();
       const itemAttr = item.getAttribute('data-modal-button');
+      const imageAttr = item.getAttribute('data-img');
       for (let frame of modalFrames) {
         const frameAttr = frame.getAttribute('data-modal');
         if (frameAttr == itemAttr) {
           frame.classList.remove('hidden');
+          const frameImg = frame.querySelector('IMG');
+          frameImg.setAttribute('src', imageAttr);
           bodyEl.classList.add('noscroll');
         }
       }
@@ -110,7 +113,7 @@ if (modalFrames.length > 0) {
   /*=============== закрыть модалки по клику вне ===============*/
   for (let frame of modalFrames) {
     const frameWin = frame.querySelector('.modal-window');
-    frameWin.addEventListener('click', function (e) {
+    frame.addEventListener('click', function (e) {
       if (e.target === e.currentTarget) {
         e.preventDefault();
         frame.classList.add('hidden');
